@@ -2,7 +2,7 @@
 
 *Summarify Case Study Projesi*
 
-Hazır bir transformer modelini* kullanarak Türkçe metinleri olumlu- olumsuz
+Hazır bir transformer modelini* kullanarak Türkçe metinleri olumlu - olumsuz
 olarak etiketleyen bir API 
 
 #### Docker Build 
@@ -10,8 +10,8 @@ Docker Image'ini oluşturmak için `docker build -t caseAPI .`,
 Image'den bir container oluşturup arkaplanda çalıştırmak için ise
 `docker run --publish 8000:8080 --detach caseAPI` komutları kullanılabilir.  
 
-Sonrasında `http://localhost:8000` adresinden API'ımıza ulaşılabilir, `http://localhost:8000/docs`
- adresindense dokümantasyonu görülebilir. 
+Sonrasında `http://localhost:8000` adresinden API'ımıza ulaşılabilir, `http://localhost:8000/docs` adresindense dokümantasyonu görülebilir. 
+ 
 ---
 #### API Kullanımı
 
