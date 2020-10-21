@@ -6,10 +6,10 @@ Hazır bir transformer modelini* kullanarak Türkçe metinleri olumlu - olumsuz
 olarak etiketleyen bir API 
 
 #### Docker Build 
-Docker Image'ini oluşturmak için `docker build -t caseAPI .` komutu kullanılabillir. Image'imiz oluşturulacak, sonrasında da bir container olarak çalıştırılacaktır.
+Docker Image'ini oluşturmak için `docker build -t caseapi .` komutu kullanılabillir. Image'imiz oluşturulacak, sonrasında da bir container olarak çalıştırılacaktır.
 
 Image'den bir container oluşturup arkaplanda çalıştırmak için ise
-`docker run --publish 8000:8080 --detach caseAPI` komutu kullanılabilir.  
+`docker run --publish 8000:8080 --detach caseapi` komutu kullanılabilir.  
 
 Sonrasında `http://localhost:8000` adresinden API'ımıza ulaşılabilir, `http://localhost:8000/docs` adresindense dokümantasyonu görülebilir.  
 
