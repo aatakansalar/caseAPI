@@ -72,5 +72,5 @@ print(response.json())
 # Çıktı: {'evaluations': [{'body': 'Bu film hayatımda izlediğim en kötü filmdi.', 'evaluation': {'label': 'negative', 'score': 0.9983533024787903}}, {'body': 'Ne kadar güzel bir kitaptı.', 'evaluation': {'label': 'positive', 'score': 0.9754379391670227}}, {'body': 'Servis çok kötüydü, yemekler soğumuştu.', 'evaluation': {'label': 'negative', 'score': 0.9993332028388977}}]}
 ````  
 
-###### Kullanılan Transformer Modeli
+###### Kullanılan Transformer Model
 - https://huggingface.co/savasy/bert-base-turkish-sentiment-cased
