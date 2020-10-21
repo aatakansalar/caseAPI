@@ -23,6 +23,11 @@ Ayrıca bu image `docker pull aatakansalar/caseapi` komutuyla indirilebilir.
 CaseAPI'ın çalıştığından emin olmak için, `http://localhost:8000/status` adresine
 bir `get` isteği atılabilir. 
 
+```shell
+>curl http://localhost:8000/status
+>{"status":"ModelAPI is up and running!"}
+```
+
 ##### Değerlendirme Operasyonları
 CaseAPI ile bir metni değerlendirmek için `http://localhost:8000/argument`
 adresine bir `post` sorgusu yapılmalı. Sorguda etiketlenmesini istediğimiz
@@ -59,7 +64,7 @@ arguments = {
         {"body": "Servis çok kötüydü, yemekler soğumuştu."},
     ]
 }
-response = requests.post("http://3.131.38.243:8080/arguments", json = arguments)
+response = requests.post("http://localhost:8000/arguments", json = arguments)
 print(response.status_code)
 # Çıktı: 200
 
