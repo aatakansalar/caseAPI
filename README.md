@@ -11,8 +11,11 @@ Docker Image'ini oluşturmak için `docker build -t caseAPI .` komutu kullanıla
 Image'den bir container oluşturup arkaplanda çalıştırmak için ise
 `docker run --publish 8000:8080 --detach caseAPI` komutu kullanılabilir.  
 
-Sonrasında `http://localhost:8000` adresinden API'ımıza ulaşılabilir, `http://localhost:8000/docs` adresindense dokümantasyonu görülebilir. 
- 
+Sonrasında `http://localhost:8000` adresinden API'ımıza ulaşılabilir, `http://localhost:8000/docs` adresindense dokümantasyonu görülebilir.  
+
+Ayrıca bu image `docker pull aatakansalar/caseapi` komutuyla indirilebilir.  
+
+
 ---
 #### API Kullanımı
 
