@@ -9,7 +9,7 @@ olarak etiketleyen bir API
 Docker Image'ini oluşturmak için `docker build -t caseapi .` komutu kullanılabillir. Image'imiz oluşturulacak, sonrasında da bir container olarak çalıştırılacaktır.
 
 Image'den bir container oluşturup arkaplanda çalıştırmak için ise
-`docker run --publish 8000:8080 --detach caseapi` komutu kullanılabilir.  
+`docker run --publish 8000:8080 --detach caseapi` gibi bir komut kullanılabilir.  
 
 Sonrasında `http://localhost:8000` adresinden API'ımıza ulaşılabilir, `http://localhost:8000/docs` adresindense dokümantasyonu görülebilir.  
 
@@ -34,7 +34,7 @@ adresine bir `post` sorgusu yapılmalı. Sorguda etiketlenmesini istediğimiz
 metni de parametre olarak eklemeliyiz. Bu parametremizin biçimi de `{"body": "Metin..."}` 
 şeklinde bir dictionary olmalıdır.
 
-Bunu bir python betiğinde şu şekilde yapabiliriz:
+Bunu bir python scriptinde şu şekilde yapabiliriz:
 ```` python
 import requests
 argument = {"body": "Bu film hayatımda izlediğim en kötü filmdi."}
@@ -53,7 +53,7 @@ etiketlenmesini istediğimiz metinlerimizi de sorgumuzla iliştirmeliyiz. Bu par
 `{"argList": [{"body":"Metin..."},{"body":"Metin..."},{"body":"Metin..."}]}` şeklinde 
 olmalıdır.
 
-Bunu bir python betiğinde şu şekilde yapabiliriz:
+Bunu bir python scriptinde şu şekilde yapabiliriz:
 
 ```` python
 import requests
