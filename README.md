@@ -19,7 +19,7 @@ Ayrıca bu image `docker pull aatakansalar/caseapi` komutuyla indirilebilir.
 ---
 #### API Kullanımı
 
-##### Status
+##### Status Kullanımı
 CaseAPI'ı kontrol etmek için, `http://localhost:8000/status` adresine
 bir `get` isteği atılabilir. 
 
@@ -28,7 +28,7 @@ bir `get` isteği atılabilir.
 >{"status":"ModelAPI is up and running!"}
 ```
 
-##### Değerlendirme Operasyonları
+##### Değerlendirme Operasyonları Kullanımı
 CaseAPI ile bir metni değerlendirmek için `http://localhost:8000/argument`
 adresine bir `post` sorgusu yapılmalı. Sorguda etiketlenmesini istediğimiz
 metni de parametre olarak eklemeliyiz. Bu parametremizin biçimi de `{"body": "Metin..."}` 
