@@ -20,7 +20,7 @@ Ayrıca bu image `docker pull aatakansalar/caseapi` komutuyla indirilebilir.
 #### API Kullanımı
 
 ##### Status
-CaseAPI'ın çalıştığından emin olmak için, `http://localhost:8000/status` adresine
+CaseAPI'ı kontrol etmek için, `http://localhost:8000/status` adresine
 bir `get` isteği atılabilir. 
 
 ```shell
