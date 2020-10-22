@@ -2,6 +2,13 @@ from fastapi import FastAPI, Body
 from transformer_model import TransformerModel
 from models import CONSTANTS, Argument, Arguments, ArgumentResponse, ArgumentsResponse
 
+"""
+    API'ımızın çalışacağı adresin sonuna /docs eklediğimizde, hazır bir dokümantasyon göreceğiz.
+    API'ımız hakkında temel bilgileri bu dokümantasyonda gösterebilmek için app  nesnemizi 
+    tanımlarken bu bilgileri parametre olarak giriyorum. Örneğin tags_metadata sorgularımızı
+    dokümantasyonda gruplamak için kullanılacak.
+"""
+
 tags_metadata = [
     {
         "name": "Status",
