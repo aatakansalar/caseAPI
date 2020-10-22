@@ -7,13 +7,13 @@ olarak etiketleyen bir API
 
 #### Docker Build 
 Docker Image'ini oluşturmak için `docker build -t caseapi .` komutu kullanılabillir. Image'imiz oluşturulacak, sonrasında da bir container olarak çalıştırılacaktır.
+  
+Ayrıca bu image `docker pull aatakansalar/caseapi` komutuyla indirilebilir.  
 
 Image'den bir container oluşturup arkaplanda çalıştırmak için ise
 `docker run --publish 8000:8080 --detach caseapi` gibi bir komut kullanılabilir.  
 
-Sonrasında `http://localhost:8000` adresinden API'ımıza ulaşılabilir, `http://localhost:8000/docs` adresindense dokümantasyonu görülebilir.  
-
-Ayrıca bu image `docker pull aatakansalar/caseapi` komutuyla indirilebilir.  
+Sonrasında `http://localhost:8000` adresinden API'ımıza ulaşılabilir, `http://localhost:8000/docs` adresindense dokümantasyonu görülebilir.   
 
 
 ---
