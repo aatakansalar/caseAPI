@@ -30,8 +30,6 @@ app = FastAPI(
 @app.get('/', include_in_schema = False, tags=["Status"])
 async def status_check():
     return "This is CaseAPI!"
-    # In the docker image, we return statusResponse instead like below.
-    # return CONSTANTS["statusResponse"] 
 
 
 @app.get('/status', tags=["Status"])
