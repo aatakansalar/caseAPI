@@ -13,23 +13,23 @@ Ayrıca bu image `docker pull aatakansalar/caseapi` komutuyla indirilebilir.
 Image'den bir container oluşturup arkaplanda çalıştırmak için ise
 `docker run --publish 8000:8080 --detach caseapi` gibi bir komut kullanılabilir.  
 
-Sonrasında `http://localhost:8000` adresinden API'ımıza ulaşılabilir, `http://localhost:8000/docs` adresindense dokümantasyonu görülebilir.   
+Sonrasında `http://localhost` adresinden API'ımıza ulaşılabilir, `http://localhost/docs` adresindense dokümantasyonu görülebilir.   
 
 
 ---
 #### API Kullanımı
 
 ##### Status Kullanımı
-CaseAPI'ı kontrol etmek için, `http://localhost:8000/status` adresine
+CaseAPI'ı kontrol etmek için, `http://localhost/status` adresine
 bir `get` isteği atılabilir. 
 
 ```shell
->curl http://localhost:8000/status
+>curl http://localhost/status
 >{"status":"ModelAPI is up and running!"}
 ```
 
 ##### Değerlendirme Operasyonları Kullanımı
-CaseAPI ile bir metni değerlendirmek için `http://localhost:8000/argument`
+CaseAPI ile bir metni değerlendirmek için `http://localhost/argument`
 adresine bir `post` sorgusu yapılmalı. Sorguda etiketlenmesini istediğimiz
 metni de parametre olarak eklemeliyiz. Bu parametremizin biçimi de `{"body": "Metin..."}` 
 şeklinde bir dictionary olmalıdır.
@@ -38,7 +38,7 @@ Bunu bir python scriptinde şu şekilde yapabiliriz:
 ```` python
 import requests
 argument = {"body": "Bu film hayatımda izlediğim en kötü filmdi."}
-response = requests.post("http://localhost:8000/argument", json = argument)
+response = requests.post("http://localhost/argument", json = argument)
 
 print(response.status_code) 
 # Çıktı: 200
@@ -48,7 +48,7 @@ print(response.json())
 ````
 
 Birbirinden bağımsız birden çok metni tek bir sorguyla değerlendirmek için ise 
-`http://localhost:8000/arguments` adresine yine bir `post` sorgusu yapılmalı. Sorgumuzda 
+`http://localhost/arguments` adresine yine bir `post` sorgusu yapılmalı. Sorgumuzda 
 etiketlenmesini istediğimiz metinlerimizi de sorgumuzla iliştirmeliyiz. Bu parametrenin biçimi de
 `{"argList": [{"body":"Metin..."},{"body":"Metin..."},{"body":"Metin..."}]}` şeklinde 
 olmalıdır.
@@ -64,7 +64,7 @@ arguments = {
         {"body": "Servis çok kötüydü, yemekler soğumuştu."},
     ]
 }
-response = requests.post("http://localhost:8000/arguments", json = arguments)
+response = requests.post("http://localhost/arguments", json = arguments)
 print(response.status_code)
 # Çıktı: 200
 
